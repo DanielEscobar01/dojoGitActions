@@ -44,3 +44,7 @@ jobs:
     - name: Push to Heroku
       if: steps.add.outputs.exit_code == 0
       run: git push heroku master
+      
+    - name: Deploy to Heroku
+      uses: AkhileshNS/heroku-deploy@v3.12.12
+
